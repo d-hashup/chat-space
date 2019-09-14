@@ -40,7 +40,7 @@
 - belongs_to :user
 
 
-# Qiita DB設計
+# ChatSpace DB設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
