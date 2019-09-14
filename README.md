@@ -61,17 +61,16 @@
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
-- has_many :comments
-- has_many :posts_tags
-- has_many  :tags,  through:  :posts_tags
+- belongs_to :group
 
-## tagsテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|name|string|null: false|
+|user|string|null: false|
 ### Association
-- has_many :posts_tags
-- has_many  :posts,  through:  :posts_tags
+- has_many :groups_users
+- has_many  :users,  through:  :groups_users
 
 ## posts_tagsテーブル
 |Column|Type|Options|
