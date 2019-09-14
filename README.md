@@ -72,21 +72,11 @@
 - has_many :groups_users
 - has_many  :users,  through:  :groups_users
 
-## posts_tagsテーブル
+## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|post_id|integer|null: false, foreign_key: true|
-|tag_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :post
-- belongs_to :tag
-
-## commentsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :post
+- belongs_to :group
 - belongs_to :user
